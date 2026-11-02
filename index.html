@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171512"><title>MyDrivePlayer — Retro Music</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <header class="top"><div class="brand"><span class="brand-icon">♫</span><div><strong>MYDRIVEPLAYER</strong><small>RETRO MUSIC SYSTEM</small></div></div><button id="refresh" class="small-btn">↻ <span>Aggiorna</span></button></header>
+  <main class="layout">
+    <section class="player panel">
+      <div class="panel-label"><span class="led"></span> NOW PLAYING <span class="right-label">STEREO • 90s EDITION</span></div>
+      <div class="visual">
+        <div class="vinyl" id="vinyl"><div class="vinyl-label"><img id="cover" alt="Copertina" hidden><span id="fallback">♫</span></div></div>
+        <div class="tonearm"></div>
+      </div>
+      <div class="track-info"><div class="eyebrow">IN RIPRODUZIONE</div><h1 id="title">Seleziona un brano</h1><p id="artist">La tua musica, dalla tua cartella Drive</p></div>
+      <div class="progress-wrap"><span id="current">0:00</span><input id="seek" type="range" min="0" max="1000" value="0"><span id="duration">0:00</span></div>
+      <div class="controls"><button id="shuffle" class="mode">⤨</button><button id="prev" class="control">|◀</button><button id="play" class="play">▶</button><button id="next" class="control">▶|</button><button id="repeat" class="mode">↻</button></div>
+      <div class="bottom-controls"><div class="equalizer" id="equalizer"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><label>VOLUME <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8"></label></div>
+      <audio id="audio" preload="metadata"></audio>
+    </section>
+    <aside class="playlist panel"><div class="playlist-head"><div><div class="eyebrow">COLLEZIONE</div><h2>La playlist</h2></div><span id="count" class="count">…</span></div><div id="status" class="status">Connessione a Google Drive…</div><ul id="tracks" class="tracks"></ul><div class="playlist-foot">♫ &nbsp; YOUR MUSIC LIBRARY <span>DRIVE CONNECTED</span></div></aside>
+  </main>
+  <footer>MYDRIVEPLAYER <span>ANALOG SOUL • DIGITAL SOUND</span></footer>
+</div>
+<script src="app.js"></script>
+</body></html>
